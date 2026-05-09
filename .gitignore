@@ -1,0 +1,82 @@
+# System Files
+# (Informacion que no le sirve a mis compañeros o clientes)
+
+# 1. (evita que se vena archivos invisibles de configuracion de MAC)
+.DS_Store 
+# 2. (evita que se suban vistas previas(miniaturas) de tus imagenes en WINDOWS.)
+Thumbs.db 
+# 3. (evita que se comparta la personalizacion visual de tus carpetas)
+desktop.ini 
+
+
+# IDEs / Editors
+# (Configuracion de tu mesa de trabajo personal)
+# (Estos archivos evitan que tu forma personal de usar el editor choque con la de tus compañeros.)
+
+# 1. (Evita que tis colores, extensiones y ajustes de VSCode se le impongas otros)
+.vscode/ 
+# 2. (Evita que se compartan indices y el historial de busqueda se WebStorm o IntelliJ)
+.idea/ 
+# 3. (Evita que se suban tus preferecnias (archivos abiertos o puntos de pausa) en Visual Studio)
+*.suo 
+# 4. (Evitan que se suban archivos de configuracion especificos para Node.js que solo sirven en tu PC) 
+*.ntvs* 
+# 5. "Lo mismo que .ntvs*"
+*.njsproj 
+# 6. (Evita que se comparta la organizacion de archivos que Visual Studio usa para agrupar tu proyecto)
+*.sln 
+
+
+# Dependencies
+# (Materiales de construccion externos)
+# (Evitan que tu proyecto sea gigante y lento. En lugar de subir el material, subes la "lista de compras" para que cada quien lo descargue.)
+
+# 1. (Evita subir miles de archivos pesados que ya estan en internet.)
+node_modules/ 
+# 2. (Evita que se dupliquen paquetes instalados con la herramienta JSPM)
+jspm_packages/ 
+# 3. (Evita subir herramientas de relleno que solo sirven para que el navegador entienda ciertos codigos modernos)
+web_modules/ 
+
+
+
+# Build / Output
+# (Resultado final del codigo procesado)
+
+# 1. (Evitan subir version empaquetada de la web, se ignoran porque se vuelven a generar cada vez que haces un cambio.)
+dist/
+build/
+out/ 
+# 4. (Evita subir papeles sucios con registros de lo que paso en tu computadora; solo sirven para ver errores del momento)
+*.log 
+# 5. (Evita que se queden guradados archivos temporales que el sistema crea y borra por si solo)
+*.tmp 
+
+
+# Security / Environment
+# (La caja fuerte de tus secretos)
+# Estos archivos evitan que te roben información o dinero. Se quedan siempre en tu computadora para que nadie más vea tus claves secretas.
+
+# 1. (Evita que tus contraseñas, llaves de pago y datos privados se publiquen en internet)
+.env 
+# 2. (Evita que compartas configuraciones que solo funcionan en tu propia computadora)
+.env.local 
+# 3. (Evitan que tus datos de prueba personales (como una base de datos local) se mezclen con el proyecto real.)
+.env.development.local 
+# 4. (Evitan que tus datos de prueba personales (como una base de datos local) se mezclen con el proyecto real.)
+.env.test.local 
+# 5. (Evita que se filtren las llaves maestras de la web cuando ya está funcionando en vivo.)
+.env.production.local 
+
+
+
+# Debug logs
+# (Historial de errores de tus herramientas)
+
+# 1.(Evita que subas un reporte de fallos de npm que solo te sire a ti saber porque fallo algo en tu computadora)
+npm-debug.log* 
+# 2.(Evita que subas un reporte de fallos de npm que solo te sire a ti saber porque fallo algo en tu computadora)
+yarn-debug.log* 
+# 3.(Evita compartir un registro de errores de Yarn que no ayuda en nada al funcionamiento de la web)
+yarn-error.log* 
+
