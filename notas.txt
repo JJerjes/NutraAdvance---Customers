@@ -1,0 +1,69 @@
+// FORMATO JSON 
+
+// {
+//   // 1. PLUGINS: Añaden reglas adicionales que no vienen por defecto en ESLint.
+//   "plugins": [
+//     "import" // Ayuda a validar que las importaciones (require/import) sean correctas.
+//   ],
+
+//   // 2. EXTENDS: Configuraciones pre-hechas para no escribir cientos de reglas desde cero.
+//   "extends": [
+//     "eslint:recommended",    // El estándar oficial de ESLint.
+//     "plugin:import/errors", // Avisa si importas archivos que no existen.
+//     "prettier"              // Desactiva reglas de estilo que choquen con Prettier.
+//   ],
+
+//   // 3. ENV (Environment): Define dónde se ejecutará tu código.
+//   "env": {
+//     "es6": true,     // Soporta características de ES6 (let, const, promesas).
+//     "browser": true, // Permite variables globales del navegador (window, document).
+//     "node": true     // Permite variables globales de Node.js (process, __dirname).
+//   },
+
+//   // 4. PARSER OPTIONS: Define cómo debe interpretar ESLint tu sintaxis.
+//   "parserOptions": {
+//     "ecmaVersion": "latest", // Usa la versión más reciente de JavaScript.
+//     "sourceType": "module"   // Permite el uso de 'import' y 'export'.
+//   },
+
+//   // 5. RULES: Personalización total. 0 = off, 1 = warn, 2 = error.
+//   "rules": {
+//     // Variables no usadas: aviso (1), pero ignora si se llaman res, next o err.
+//     "no-unused-vars": [1, { "argsIgnorePattern": "res|next|^err" }],
+    
+//     // Forzar estilo de arrow functions: error (2) si pones 'return' cuando no es necesario.
+//     "arrow-body-style": [2, "as-needed"],
+    
+//     // Evitar reasignar parámetros: error (2), pero permite modificar sus propiedades.
+//     "no-param-reassign": [2, { "props": false }],
+    
+//     // Consola: permitido (0). No te regañará por usar console.log.
+//     "no-console": 0,
+    
+//     // Comillas: error (2) si no usas comillas simples, pero permite backticks.
+//     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    
+//     // Estilo visual: obliga a poner espacios en operadores (a + b) y paréntesis.
+//     "space-unary-ops": 2,
+//     "space-in-parens": "error",
+//     "space-infix-ops": "error",
+    
+//     // Desactivar restricciones: permite no usar nombres en funciones y comas finales.
+//     "func-names": 0,
+//     "comma-dangle": 0,
+//     "max-len": 0,
+//     "import/extensions": 0,
+    
+//     // Shadowing: error (2) si declaras una variable con nombre de una ya existente, 
+//     // pero permite excepciones comunes como 'err' o 'next'.
+//     "no-shadow": [2, { 
+//       "hoist": "all", 
+//       "allow": ["resolve", "reject", "done", "next", "err", "error"] 
+//     }],
+    
+//     // Otras reglas desactivadas para mayor flexibilidad al programar.
+//     "consistent-return": 0,
+//     "no-underscore-dangle": 0,
+//     "no-unused-expressions": "off"
+//   }
+// }

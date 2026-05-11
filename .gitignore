@@ -13,7 +13,7 @@ desktop.ini
 # (Configuracion de tu mesa de trabajo personal)
 # (Estos archivos evitan que tu forma personal de usar el editor choque con la de tus compañeros.)
 
-# 1. (Evita que tis colores, extensiones y ajustes de VSCode se le impongas otros)
+# 1. (Evita que tus colores, extensiones y ajustes de VSCode se le impongas otros)
 .vscode/ 
 # 2. (Evita que se compartan indices y el historial de busqueda se WebStorm o IntelliJ)
 .idea/ 
