@@ -1,31 +1,47 @@
-# NutraAdvance US 💊 - Salud y Bienestar Importado
+# NutraAdvance US 💊 - Imported Health and Wellness
 
-## Emprendimiento con mira al futuro.
+## Entrepreneurship with a look toward the future.
 
-**NutraAdvance US** es una aplicación web diseñada para la comercialización de productos de salud y suplementos importados desde Estados Unidos. La plataforma busca ofrecer una experiencia de compra confiable y moderna para usuarios que priorizan su bienestar, con un fuerte enfoque en la transparencia nutricional y una interfaz intuitiva.
+**NutraAdvance US** is a full-stack web platform developed for the marketing of premium imported supplements. The system allows comprehensive management, from the user (customer) experience to inventory and order management through an exclusive control panel.
 
 - **Tablero de Trello:** []
 
-### Caracteristicas Principales (Key Features)
+### System Architecture
 
-- **Transparencia Nutricional:** Integración con APIs para mostrar información detallada de componentes y beneficios.
-- **Catálogo Dinámico:** Presentación visual de productos de alta calidad con filtrado inteligente.
-- **Persistencia de Datos:** Gestión del carrito de compras y preferencias del usuario mediante **LocalStorage**.
--
+- **Frontend:** Intuitive user interface for browsing, selecting, and buying products.
+- **Backend:** API structured in **C# (.NET Core)** to handle business logic and transactions.
+- **Database:** **MySQL** for robust persistence of customers, purchase orders, and inventory.
+- **Admin Panel:** Private interface for managing products, controlling stock, and tracking sales.
 
-### Stack Técnico (Technical Stack)
+### Key Features
 
-- **Herramientas:** Vite, ESLint, Prettier.
-- **Lenguajes:** HTML5, CSS3, JavaScript (Módulos ES).
-- **APIs:** Integración de datos para información nutricional y galería de productos.
+- **Purchase Process (Checkout):** Automatic registration of customers and transactions in the database.
+- **Admin Control Panel:**
+  - Viewing sold products and customer details.
+  - Inventory management (Stock control).
+  - Sales reports.
+- **Nutritional Transparency:** Dynamic catalog with detailed specifications of each supplement.
 
-### Comandos de Flujo de Trabajo (Common Workflow Commands)
+### Technical Stack
 
-- `npm run dev` - Inicia el servidor de desarrollo local (Starts the local development server).
-- `npm run build` - Genera los archivos listos para producción en `/dist` (Generates production-ready files).
-- `npm run format` - Formatea el código automáticamente con Prettier (Automatically formats code).
-- `npm run lint` - Revisa la calidad del código con ESLint (Checks code quality).
+- **Frontend:** HTML5, CSS3, JavaScript (ES Modules).
+- **Backend:** C# (.NET Core / ASP.NET).
+- **Database:** MySQL (Relational Database Management System).
+- **Development Tools:** Visual Studio, Vite, ESLint, Prettier.
 
----
+### Database Schema
 
-> **"NutraAdvance US: Calidad que transforma tu vida"** — Priorizando tu salud con estándares internacionales.
+_The system uses a relational scheme to ensure data integrity:_
+
+- **Users Table:** Customer data and authentication.
+- **Products Table:** Inventory, pricing, and stock management.
+- **Orders Table:** Detailed transaction records and customer-product relationship.
+
+### Common Workflow Commands
+
+- `npm run dev` - Starts the local development server.
+- `npm run build` - Builds the files ready for production.
+- `npm run format` - Automatically formats the code with Prettier.
+- `npm run lint` - Checks the code quality with ESLint.
+
+> **"NutraAdvance US: Quality that transforms your life"** — Prioritizing your health with international standards.
