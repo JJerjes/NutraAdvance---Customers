@@ -10,7 +10,7 @@ async function loadComponent(targetContainer, filePath) {
   }
 }
 
-loadComponent('main-header', 'public/partials/header.html');
+loadComponent('main-header', 'src/public/partials/header.html');
 
 
 
