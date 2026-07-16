@@ -115,7 +115,6 @@ body {
         box-shadow: 5px 20px 50px -10px;
         height: 200px;
         background: #07173E;
-        /* background: blue; */
         position: relative;
         display: flex;
         margin: 20px;
@@ -124,6 +123,7 @@ body {
         overflow: hidden;
         border-radius: 9px;
         z-index: 1;
+        cursor: pointer;
 
         & h3 {
           z-index: 2;
@@ -159,9 +159,7 @@ body {
           width: 200%;
           height: 60%;
           background: linear-gradient(0deg, transparent, #32cd32, #32cd32);
-          /* background: linear-gradient(180deg, rgb(247, 240, 240), rgb(32, 233, 10)); */
           animation: rotBGimg 15s linear infinite;
-          /* transition: all 0.2s linear; */
           z-index: 0;
         }
 
@@ -169,7 +167,6 @@ body {
           content: "";
           position: absolute;
           background: #07173E;
-          /* background: blue; */
           inset: 3px;
           border-radius: 10px;
           z-index: 1;
@@ -177,7 +174,79 @@ body {
       }
     }
   }
-}
+
+  & > footer {
+    grid-area: footer;
+    padding: 10px;
+    background: #07173E;
+
+    & .content-footer {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-direction: column;
+    }
+
+    & .grid {
+      margin: 10px;
+      color: white;
+    }
+
+    & .grid h3 {
+      font-size: .7rem;
+      font-weight: bold;
+      padding: 5px;
+      color: white;
+    }
+
+    & .grid-1 ul {
+      list-style: none;
+      padding: 5px;
+    }
+
+    & .grid-1 li a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.6rem;
+    }
+
+    & .grid-2 {
+
+      & p {
+        margin: 5px 0 5px 5px;
+      }
+
+      & i {
+        font-size: 0.8rem;
+        cursor: pointer;
+      }
+
+      & a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.8rem;
+      }
+    }
+
+    & .grid-3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    & .grid-3 i {
+      gap: 10px;
+      margin: 6px;
+      color: white;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    }
+  }
+
+
+/*RESPONSIVE*/
 
 @media (min-width: 768px) {
   body > header
@@ -191,6 +260,13 @@ body {
   body>main .catalog-grid {
     flex-direction: row;
   }
+
+  body > footer .content-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
  }
 
 @media (min-width: 1024px) {
@@ -214,5 +290,4 @@ body {
     }
   }
 }
-
 

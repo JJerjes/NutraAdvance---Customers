@@ -12,7 +12,7 @@ async function loadComponent(targetContainer, filePath) {
 
 loadComponent('main-header', 'nutraadvance-frontend/src/public/partials/header.html');
 loadComponent('main-content', 'nutraadvance-frontend/src/public/partials/main-hero.html');
-
+loadComponent('main-footer', 'nutraadvance-frontend/src/public/partials/footer.html');
 
 
 
