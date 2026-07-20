@@ -15,4 +15,18 @@ loadComponent('main-content', 'nutraadvance-frontend/src/public/partials/main-he
 loadComponent('main-footer', 'nutraadvance-frontend/src/public/partials/footer.html');
 
 
+//TOQUE INTERACTIVO
+function initCardInteractions() {
+  const cards = document.querySelectorAll('#card');
 
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const category = card.querySelector('h3').innerText;
+      console.log(`Navegando a: ${category}`);
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCardInteractions();
+})

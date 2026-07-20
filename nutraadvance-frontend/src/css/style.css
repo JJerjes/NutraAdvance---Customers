@@ -75,7 +75,7 @@ body {
 
       &:hover {
         color: #32cd32;
-        text-shadow: 0 0 8px #32cd32;
+        /* text-shadow: 0 0 8px #32cd32; */
       }
     }
   }
@@ -118,48 +118,52 @@ body {
         position: relative;
         display: flex;
         margin: 20px;
-        place-content: center;
-        place-items: center;
         overflow: hidden;
         border-radius: 9px;
         z-index: 1;
         cursor: pointer;
 
-        & h3 {
-          z-index: 2;
+        & a {
+          display: flex;
+          place-content: center;
+          place-items: center;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
           color: white;
+          z-index: 2;
+        }
+
+        & h3 {
           font-size: 0.9rem;
           font-weight: 500;
-          pointer-events: none;
           font-family: 'Montserrat', cursive;
         }
+
 
         & i {
           display: inline-block;
           font-size: 2rem;
           margin-right: 10px;
-          color: white;
-          z-index: 2;
-
           animation: shake 2s infinite ease-in-out;
         }
 
         &:hover {
+          transform: translateY(-1px);
+          
           & i {
             animation-play-state: paused;
           }
-
-          transform: translateY(-1px);
-
         }
 
         &::before {
           content: "";
           position: absolute;
           width: 200%;
-          height: 60%;
-          background: linear-gradient(0deg, transparent, #32cd32, #32cd32);
+          height: 160%;
+          background: linear-gradient(0deg, transparent, #07173E ,#32cd32 );
           animation: rotBGimg 15s linear infinite;
+          transform-origin: center center;
           z-index: 0;
         }
 
@@ -168,7 +172,7 @@ body {
           position: absolute;
           background: #07173E;
           inset: 3px;
-          border-radius: 10px;
+          border-radius: 7px;
           z-index: 1;
         }
       }
@@ -208,8 +212,13 @@ body {
       color: white;
       text-decoration: none;
       font-size: 0.6rem;
+
+      &:hover {
+          color: #32cd32;
+        }
     }
 
+   
     & .grid-2 {
 
       & p {
@@ -225,6 +234,10 @@ body {
         color: white;
         text-decoration: none;
         font-size: 0.8rem;
+
+        &:hover {
+            color: #32cd32;
+          }
       }
     }
 
