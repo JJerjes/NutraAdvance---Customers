@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nombre": "Magnesium Citrate Pure Powder - NOW",
+    "descripcion": "Polvo puro de citrato de magnesio (8 oz / 227 g). Soporte para el sistema nervioso, producción de energía y función enzimática.",
+    "precio": 300,
+    "imagen": "../src/public/images/salud/magnesio.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Potassium Citrate Pure Powder -NOW",
+    "descripcion": "Mineral esencial en polvo (12 oz / 340 g). Apoya el equilibrio de electrolitos, el pH normal y la contracción muscular adecuada.",
+    "precio": 300,
+    "imagen": "../src/public/images/salud/magnesio.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Glucosamine HCl with MSM - Kirkland Signature",
+    "descripcion": "Frasco de 375 tabletas de extra fuerza (1500 mg / 1500 mg). Amortigua las articulaciones, apoya el movimiento y promueve cartílago saludable (Verificado USP).",
+    "precio": 350,
+    "imagen": "../src/public/images/salud/magnesio.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Optimum Nutrition Micronized Creatine Powder",
+    "descripcion": "Creatina monohidratada micronizada sin sabor (1.32 lb / 600 g - 120 servicios). Diseñada para soporte de construcción muscular y fuerza explosiva.",
+    "precio": 300,
+    "imagen": "../src/public/images/salud/magnesio.png"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombre": "Magnesium Citrate Pure Powder - NOW",
+    "descripcion": "✔️ Suplemento dietético en polvo puro,<br>✔️ Frasco de 8 oz / 227 g.<br>✔️ Ideal para combatir el cansancio crónico, la fatiga y la falta de energía.<br>✔️ Ayuda a mejorar la sensibilidad a la insulina y apoya en el control de la diabetes.<br>✔️ Alivia calambres musculares, dolores articulares y relaja el sistema nervioso.<br>✔️ Calidad farmacéutica garantizada (Importado de EE. UU.).",
+    "precio": {
+      "original": 350,
+      "oferta": 300
+    },
+    "imagen": "../src/public/images/salud/magnesio.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Potassium Citrate Pure Powder - NOW",
+    "descripcion": "✔️ Suplemento dietético en polvo puro,<br>✔️ Frasco de 12 oz / 340 g.<br>✔️ Ideal para personas que sufren de calambres musculares constantes y debilidad corporal.<br>✔️ Ideal para personas que sufren de presión arterial alta y buscan apoyo cardiovascular.<br>✔️ Ideal para personas que sufren de desequilibrio de electrolitos o tendencia a cálculos renales.<br>✔️ Calidad farmacéutica garantizada (Importado de EE. UU.).",
+    "precio": {
+      "original": 380,
+      "oferta": 350
+    },
+    "imagen": "../src/public/images/salud/potasio.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Glucosamine HCl with MSM - Kirkland Signature",
+    "descripcion": "✔️ Suplemento dietético,<br>✔️ Frasco de 375 tabletas (1500 mg / 1500 mg) Rinde para 187 tomas.<br>✔️ Ideal para osteoartritis y desgaste articular.<br>✔️ Ayuda a aliviar el dolor y la rigidez, Mejora la movilidad.<br>✔️ Combate los síntomas de la artrosis y protege el cartílago.<br>✔️ Calidad farmacéutica garantizada (Importado de EE. UU.).",
+    "precio": {
+      "original": 400,
+      "oferta": 350
+    },
+    "imagen": "../src/public/images/salud/glucosamine.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Optimum Nutrition Micronized Creatine Powder",
+    "descripcion": "✔️ Suplemento dietético en polvo micronizado de alta pureza,<br>✔️ Presentación de 300g / 600g (rinde para múltiples servicios).<br>✔️ Ideal para personas que sufren de fatiga muscular rápida y bajo rendimiento físico.<br>✔️ Ideal para personas que buscan aumentar la fuerza, la potencia y el crecimiento de masa muscular.<br>✔️ Ideal para deportistas y personas que desean mejorar la recuperación y la función cognitiva.<br>✔️ Calidad premium garantizada (Importado de EE. UU.).",
+    "precio": {
+      "original": 450,
+      "oferta": 400
+    },
+    "imagen": "../src/public/images/salud/creatina.webp"
+  }
+]
