@@ -82,11 +82,11 @@ async function loadProducts(jsonPath) {
 // Detectamos en qué página estamos según la URL
 document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('salud.html')) {
-    loadProducts('../src/public/json/salud.json');
+    loadProducts('../nutraadvance-frontend/src/public/json/salud.json');
   }
   
   if (window.location.pathname.includes('accesorios.html')) {
-    loadProducts('../src/public/json/accesorios.json');
+    loadProducts('../nutraadvance-frontend/src/public/json/accesorios.json');
   }
   
   if (window.location.pathname.includes('ofertas.html')) {
