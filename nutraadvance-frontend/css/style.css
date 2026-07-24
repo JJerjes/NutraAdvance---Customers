@@ -67,7 +67,6 @@ body {
 
   .back-home-container {
     margin: 0 0 0 -17px;
-    border: 1px solid red;
 
     .btn-back {
       display: inline-flex;
