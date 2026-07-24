@@ -37,8 +37,8 @@ async function loadProducts(jsonPath) {
           <p>${product.descripcion}</p>
         
           <div class="price-container">
-            <span class="original-price" style="text-decoration: line-through; font-size: 0.85rem; color: #888; margin-right: 8px;">S/${product.precio.original}</span>
-            <span class="price">S/${product.precio.oferta}</span>
+            <span class="original-price" style="text-decoration: line-through; font-size: 0.7rem; color: #888; margin-right: 8px;">Antes: S/${product.precio.original}</span>
+            <span class="price">Ahora: S/${product.precio.oferta}</span>
           </div>
           <button class="btn-buy" data-id="${product.id}">Añadir al carrito</button>
         </div>      

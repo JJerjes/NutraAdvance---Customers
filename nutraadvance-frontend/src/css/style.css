@@ -100,7 +100,7 @@ body {
 
   & > main {
     grid-area: main;
-    padding-top: 200px;
+    padding-top: 150px;
 
     & .catalog-grid {
       display: flex;
