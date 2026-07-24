@@ -10,9 +10,9 @@ async function loadComponent(targetContainer, filePath) {
   }
 }
 
-loadComponent('main-header', 'src/public/partials/header.html');
-loadComponent('main-content', 'src/public/partials/main-hero.html');
-loadComponent('main-footer', 'src/public/partials/footer.html');
+loadComponent('main-header', 'nutraadvance-frontend/src/public/partials/header.html');
+loadComponent('main-content', 'nutraadvance-frontend/src/public/partials/main-hero.html');
+loadComponent('main-footer', 'nutraadvance-frontend/src/public/partials/footer.html');
 
 
 //TOQUE INTERACTIVO
