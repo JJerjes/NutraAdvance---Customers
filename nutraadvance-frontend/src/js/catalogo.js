@@ -1,12 +1,13 @@
+import { addToCart, removeFromCart, updateCartModal, openCartModal, closeCartModal, minimizeCartModal } from "./cart.js";
+
+let allProductsLoaded = [];
+
 async function loadComponent(targetContainer, filePath) {
   try {
     const response = await fetch(filePath);
-
     if (!response.ok) throw new Error(`No se pudo cargar ${filePath}`);
     const data = await response.text();
-
     document.getElementById(targetContainer).innerHTML = data;
-
   } catch (error) {
     console.error('Error: ', error);
   } 
@@ -14,14 +15,17 @@ async function loadComponent(targetContainer, filePath) {
 
 loadComponent('main-header', '../src/public/partials/header.html');
 loadComponent('main-footer', '../src/public/partials/footer.html');
+loadComponent('modal-container', '../src/public/partials/cart-modal.html');
 
 async function loadProducts(jsonPath) {
   try {
     const response = await fetch(jsonPath);
     if (!response.ok) throw new Error('No se pudo cargar el archivo de productos');
+    
     const products = await response.json();
-    const container = document.getElementById('products-grid');
+    allProductsLoaded = products;
 
+    const container = document.getElementById('products-grid');
     if (!container) return;
 
     container.innerHTML = '';
@@ -92,4 +96,47 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('ofertas.html')) {
     loadProducts('../src/public/json/ofertas.json');
   }
+
+  updateCartModal();
+
+  // Escuchador global de clics corregido
+  document.addEventListener('click', (event) => {
+    // 1. Añadir al carrito
+    if (event.target.classList.contains('btn-buy')) {
+      const productId = event.target.getAttribute('data-id');
+      const selectedProduct = allProductsLoaded.find(p => p.id == productId);
+
+      if (selectedProduct) {
+        addToCart(selectedProduct);
+      }
+    }
+
+    // 2. Eliminar producto individual
+    if (event.target.classList.contains('remove-item-btn')) {
+      const productId = event.target.getAttribute('data-id');
+      if (productId) removeFromCart(productId);
+    }
+
+    // 3. Minimizar el carrito (detecta el botón o cualquier elemento dentro de él)
+    const minimizeBtn = event.target.closest('#minimize-modal');
+    if (minimizeBtn) {
+      minimizeCartModal();
+      return;
+    }
+
+    // 4. Abrir el carrito desde la pestaña flotante minimizada
+    const toggleTab = event.target.closest('#cart-toggle-btn');
+    if (toggleTab) {
+      openCartModal();
+      return;
+    }
+
+    // 5. Cerrar o minimizar si hacen clic fuera del contenido deslizante (en el fondo oscuro)
+    const modalContainer = document.getElementById('cart-modal');
+    if (event.target === modalContainer) {
+      minimizeCartModal(); // Es mejor minimizar en lugar de cerrar por completo para no perder la pestaña
+    }
+  });
+
+  
 });

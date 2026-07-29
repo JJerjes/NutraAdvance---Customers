@@ -1,3 +1,7 @@
+//  FUNCIÓN loadComponent
+//  Propósito: Descarga un archivo HTML externo (como un partial) y lo inyecta 
+//  dentro de un contenedor específico en la página actual.
+ 
 async function loadComponent(targetContainer, filePath) {
   try {
     const response = await fetch(filePath);

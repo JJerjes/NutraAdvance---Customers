@@ -45,3 +45,48 @@ _The system uses a relational scheme to ensure data integrity:_
 - `npm run lint` - Checks the code quality with ESLint.
 
 > **"NutraAdvance US: Quality that transforms your life"** — Prioritizing your health with international standards.
+
+NACUSTOMERS/
+└── nutraadvance-backend/
+├── Controllers
+├── Models
+├── NutraAdvanceAPI.sln
+├── Program.cs
+└── nutraadvance-frontend/
+├── pages/
+│ ├── accesorios.html
+│ ├── ofertas.html
+│ └── salud.html
+├── src/
+│ ├── css/
+│ │ ├── catalogo.css
+│ │ └── index.css
+│ ├── js/
+│ │ ├── Alert.mjs
+│ │ ├── cart.js
+│ │ ├── Cart.mjs
+│ │ ├── catalogo.js
+│ │ ├── externalServices.mjs
+│ │ ├── template-loader.js
+│ │ └── utils.mjs
+│ ├── public/
+│ │ ├── images/
+│ │ └── json/
+│ │ ├── accesorios.json
+│ │ ├── ofertas.json
+│ │ └── salud.json
+│ └── partials/
+│ ├── cart-modal.html
+│ ├── footer.html
+│ ├── header.html
+│ └── main-hero.html
+├── .editorconfig
+├── .eslintrc.json
+├── .prettierrc
+├── .gitignore
+├── index.html
+├── notas.txt
+├── package-lock.json
+├── package.json
+├── README.md
+└── vite.config.js
