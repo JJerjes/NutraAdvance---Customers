@@ -242,68 +242,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             }
 
-            // if (simulatedOk) {
-            //     mostrarToast("✅ Pedido confirmado con éxito.", "success");
-
-            //     // --- ACTIVAR EL MODAL QUE ACABAS DE CREAR ---
-            //     const modalConfirmacion = document.getElementById('modal-confirmacion');
-            //     const resumenModal = document.getElementById('resumen-pedido-modal');
-            //     const btnCerrarModal = document.getElementById('btn-cerrar-modal');
-
-            //     resumenModal.innerHTML = `
-            //         <p><strong>Cliente:</strong> ${data.nombre}</p>
-            //         <p><strong>Estación:</strong> ${data.branch}</p>
-            //         <p><strong>Fecha:</strong> ${data.fecha}</p>
-            //         <p><strong>Hora:</strong> ${data.hora}</p>
-            //         <p><strong>Representante:</strong> ${data.representante}</p>
-            //         <p><strong>Total a pagar:</strong> S/${data.total.toFixed(2)}</p>
-            //     `;
-
-            //     if (modalConfirmacion) {
-            //         modalConfirmacion.style.display = 'flex';
-            //     }
-
-            //     btnCerrarModal.onclick = () => {
-            //         modalConfirmacion.style.display = 'none';
-            //         form.reset();
-            //         localStorage.removeItem('cart');
-            //         actualizarListaProductos([]);
-            //         window.location.href = '/';
-            //     };
-            // }
-
         } catch (error) {
             console.error('❌ Error al enviar:', error);
             mostrarToast(`Ocurrió un error: ${error.message}`, "error");
         }
 
-        // try {
-        //     // --- SIMULACIÓN LOCAL MIENTRAS NO HAY HOSTING ---
-        //     console.log("📦 Datos que se enviarían al backend:", JSON.stringify(data, null, 2));
-
-        //     // Simulamos que el servidor responde con éxito después de 1 segundo
-        //     await new Promise((resolve) => setTimeout(resolve, 1000));
-        //     const result = { success: true };
-        //     const simulatedOk = true; 
-        //     // -----------------------------------------------
-
-        //     if (simulatedOk) {
-        //         mostrarToast("✅ Pedido simulado con éxito. (Revisa tu consola)", "success");
-        //         form.reset();
-        //         localStorage.removeItem('cart');
-        //         actualizarListaProductos([]);
-        //         setTimeout(() => {
-        //             window.location.href = '/';
-        //         }, 2000); // espera 2 segundos antes de redirigir
-        //     } else {
-        //         mostrarToast(`⚠️ Error: ${result.error || 'No se pudo confirmar el pedido.'}`, "error");
-        //     }
-
-        // } catch (error) {
-        //     console.error('❌ Error al enviar:', error);
-        //     mostrarToast(`Ocurrió un error al confirmar el pedido: ${error.message}`, "error");
-        // }
-
+        
         // try {
         //     const response = await fetch('https://www.lookandgo.pe/backend/confirmar-compra.php', {
         //         method: 'POST',

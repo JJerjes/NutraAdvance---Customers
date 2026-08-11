@@ -97,7 +97,7 @@ export function handleFormSubmit(e) {
     document.getElementById('cerrar-modal-exito').addEventListener('click', () => {
       modalContainer.classList.remove('active');
       localStorage.removeItem('cart');
-      window.location.href = '../index.html';
+      window.location.href = '/index.html';
     });
   }
 }

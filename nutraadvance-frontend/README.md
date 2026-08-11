@@ -77,9 +77,10 @@ NACUSTOMERS/
 │ ├── public/
 │ │ ├── images/
 │ │ └── json/
-├── accesorios.json
-├── disponibilidad.json
-├── ofertas.json
+| | ├── accesorios.json
+| | ├── disponibilidad.json
+| | ├── ofertas.json
+| | └── salud.json
 | │ └── salud.json
 │ └── partials/
 │ ├── cart-modal.html
