@@ -54,27 +54,33 @@ NACUSTOMERS/
 ├── Program.cs
 └── nutraadvance-frontend/
 ├── pages/
+│ ├── checkout.html
 │ ├── accesorios.html
 │ ├── ofertas.html
 │ └── salud.html
 ├── src/
 │ ├── css/
 │ │ ├── catalogo.css
-│ │ └── index.css
+│ │ ├── checkout.css
+│ │ ├── index.css
+| | └── modal-pedidos.css
 │ ├── js/
-│ │ ├── Alert.mjs
 │ │ ├── cart.js
-│ │ ├── Cart.mjs
+│ │ ├── cartCheckout.js
 │ │ ├── catalogo.js
-│ │ ├── externalServices.mjs
+│ │ ├── checkout.js
+│ │ ├── checkoutDynamucs.js
+│ │ ├── componentLoader.js
+│ │ ├── modal-confirmar.js
 │ │ ├── template-loader.js
-│ │ └── utils.mjs
+| | └── toast.js
 │ ├── public/
 │ │ ├── images/
 │ │ └── json/
-│ │ ├── accesorios.json
-│ │ ├── ofertas.json
-│ │ └── salud.json
+├── accesorios.json
+├── disponibilidad.json
+├── ofertas.json
+| │ └── salud.json
 │ └── partials/
 │ ├── cart-modal.html
 │ ├── footer.html

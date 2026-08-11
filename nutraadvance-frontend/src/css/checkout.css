@@ -1,0 +1,405 @@
+/* RESET GENERAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ----------------------------- */
+/* BANNER CONFIANZA (Mobile First) */
+/* ----------------------------- */
+
+.bannerconfianza {
+  margin: 20px;
+  
+  color: #fff;
+  text-align: center;
+  padding: 28px 18px;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  margin-bottom: 25px;
+
+  /* Título */
+  & h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    color: #1a237e;
+  }
+
+  /* Texto */
+  & p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-top: 10px;
+    color: black;
+  }
+
+  /* Destacados */
+  & b {
+    color: #e53a0f;
+  }
+
+  /* Icono y enlace WhatsApp */
+  & a {
+    color: #25D366;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 6px;
+
+    & i {
+      font-size: 1.1rem;
+      margin-right: 5px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* Tablet (768px en adelante) */
+  @media (min-width: 768px) {
+    padding: 35px 25px;
+
+    & h2 {
+      font-size: 1.9rem;
+    }
+
+    & p {
+      font-size: 1rem;
+    }
+  }
+
+  /* Desktop (1024px en adelante) */
+  @media (min-width: 1024px) {
+    padding: 40px 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 24px 24px;
+
+    & h2 {
+      font-size: 2.1rem;
+    }
+  }
+}
+
+/* CONTENEDOR */
+.container {
+  padding: 20px;
+  background: #f3f4f7;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    padding: 30px 20px;
+  }
+}
+
+/* TARJETA FORMULARIO */
+.formulario {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 560px;
+
+  /* TITULO */
+  & h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1a237e;
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+
+  /* Tablet (768px en adelante) */
+  @media (min-width: 768px) {
+    max-width: 680px;
+    padding: 35px 30px;
+
+    & h2 {
+      font-size: 1.9rem;
+    }
+  }
+
+  /* Desktop (1024px en adelante) */
+  @media (min-width: 1024px) {
+    max-width: 750px;
+    padding: 40px;
+  }
+}
+
+/* FORMATO DEL FORMULARIO */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* FIELDSET */
+fieldset {
+  border: 1px solid #d4d7dd;
+  border-radius: 10px;
+  padding: 18px;
+  background: #fafafa;
+
+  @media (min-width: 768px) {
+    padding: 22px;
+  }
+}
+
+legend {
+  padding: 0 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #3949ab;
+
+  @media (min-width: 768px) {
+    font-size: 1.15rem;
+  }
+}
+
+/* LABELS */
+label {
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 14px;
+  font-weight: 500;
+  font-size: 0.93rem;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+/* INPUTS + SELECTS */
+input,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 7px;
+  border: 1.8px solid #c8c8c8;
+  background-color: #fdfdfd;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+
+  /* FOCUS EFECTO */
+  &:focus {
+    border-color: #3949ab;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.18);
+    outline: none;
+  }
+
+  /* INPUT READONLY */
+  &[readonly] {
+    background-color: #e9e9e9;
+    cursor: not-allowed;
+  }
+
+  /* INPUT COMPLETO O INCOMPLETO PARA JS */
+  &.completo {
+    border-left: 6px solid #2ecc71;
+  }
+
+  &.incompleto {
+    border-left: 6px solid #e74c3c;
+  }
+}
+
+/* LISTA DE PRODUCTOS */
+#lista-seleccionados {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+  max-height: 170px;
+  overflow-y: auto;
+
+  & li {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 4px;
+    font-size: 0.95rem;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+/* TOTAL */
+.total-precio {
+  margin-top: 12px;
+  padding: 12px;
+  background: #e8f2ff;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: right;
+  color: #0d47a1;
+  box-shadow: inset 0 0 6px rgba(0, 70, 160, 0.18);
+}
+
+/* BOTÓN */
+button[type="submit"] {
+  padding: 15px 0;
+  background: linear-gradient(135deg, #3949ab, #1a237e);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+
+  &:hover {
+    background: linear-gradient(135deg, #1a237e, #3949ab);
+    transform: translateY(-1px);
+  }
+}
+
+/* WHATSAPP FLOAT FIJO */
+.whatsapp-float {
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  & i {
+    font-size: 30px;
+    color: #fff;
+  }
+}
+
+
+/* Fondo oscuro con efecto translúcido y desenfoque moderno */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeInModal 0.3s ease-out;
+}
+
+/* Tarjeta principal del Modal */
+.modal-card {
+    background: #ffffff;
+    width: 80%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabecera Corporativa */
+.modal-header-success {
+    background: #f8fafc;
+    padding: 24px 24px 16px 24px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-icon-wrapper {
+    font-size: 40px;
+    color: #10b981;
+    /* margin-bottom: 8px;*/
+} 
+
+.modal-header-success h2 {
+    font-size: 1.35rem;
+    text-align: center;
+    color: #1e293b;
+    margin: 0;
+    font-weight: 700;
+}
+
+.modal-subtitle {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+/* Cuerpo Interno (Nested Body) */
+.modal-body-nested {
+    padding: 20px 24px;
+    background: #ffffff;
+}
+
+.resumen-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+/* Estilos internos para los textos generados por JS */
+.resumen-box p {
+    margin: 6px 0;
+    line-height: 1.4;
+}
+
+.resumen-box hr {
+    margin: 12px 0;
+    border: 0;
+    border-top: 1px solid #cbd5e1;
+}
+
+/* Pie de Página y Botón Principal */
+.modal-footer {
+    padding: 16px 24px 24px 24px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #f1f5f9;
+}
+
+.btn-confirm-action {
+    background-color: #0f172a; /* Azul oscuro corporativo / Premium */
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-confirm-action:hover {
+    background-color: #1e293b;
+}
+
+.btn-confirm-action:active {
+    transform: scale(0.98);
+}
+
+/* Animación de entrada suave */
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }

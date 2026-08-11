@@ -89,6 +89,19 @@ export function updateCartModal() {
   cartTotalElement.textContent = total.toFixed(2);
 }
 
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'checkout-btn') {
+    const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    if (currentCart.length === 0) {
+      alert('Tu carrito está vacio.');
+      return;
+    }
+
+    window.location.href = 'checkout.html';
+  }
+})
+
 
 
 

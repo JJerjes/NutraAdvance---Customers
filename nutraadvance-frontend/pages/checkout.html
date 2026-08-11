@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finalizar Pedido | NutraAdvance US</title>
+
+    <!-- SEO y Autoría -->
+    <meta
+      name="description"
+      content="Revisa los productos seleccionados en tu carrito y finaliza tu pedido de forma segura en NutraAdvance US."
+    />
+    <meta name="author" content="NutraAdvance US" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (Redes Sociales) -->
+    <meta property="og:title" content="Finalizar Pedido | NutraAdvance US" />
+    <meta
+      property="og:description"
+      content="Revisa los productos seleccionados en tu carrito y finaliza tu pedido de forma segura en NutraAdvance US."
+    />
+    <meta property="og:image" content="../src/public/images/meta-img.png" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="NutraAdvance US" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Finalizar Pedido | NutraAdvance US" />
+    <meta
+      name="twitter:description"
+      content="Revisa los productos seleccionados en tu carrito y finaliza tu pedido de forma segura en NutraAdvance US."
+    />
+    <meta name="twitter:image" content="../src/public/images/meta-img.png" />
+
+    <!-- Favicons e Íconos -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="../src/public/images/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../src/public/images/favicon.svg"
+    />
+    <link rel="shortcut icon" href="../src/public/images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../src/public/images/faviconNutraAdvance/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="NutraAdvance US" />
+    <link rel="manifest" href="../src/public/images/site.webmanifest" />
+
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Librerías Externas -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+
+    <!-- CSS Principal y Script -->
+    <link rel="stylesheet" href="../src/css/index.css" />
+    <link rel="stylesheet" href="../src/css/checkout.css" />
+    <script type="module" src="../src/js/checkout.js"></script>
+  </head>
+  <body>
+    <header id="main-header"></header>
+
+    <main>
+      <section class="bannerconfianza">
+        <h2>Reserva tu entrega segura</h2>
+        <p>
+          <i class="fab fa-whatsapp"></i><b>IMPORTANTE:</b> Si prefieres envio a
+          domicilio, por favor no llenes este formulario. Contactanos directo
+          por
+          <a
+            href="https://wa.me/51922762808?text=Hola,%20me%20interesan%20sus%20aproductos%20y%20quisiera%20más%20información."
+            target="_blank"
+            ><b>WhatsApp</b></a
+          >
+          para coordinar el delivery a casa.
+        </p>
+      </section>
+
+      <section class="container">
+        <section class="formulario">
+          <h2>Formulario de Reserva y Coordinacion</h2>
+
+          <form
+            id="contact-form"
+            class="form"
+            action=""
+            method="post"
+            novalidate
+          >
+            <fieldset>
+              <legend>Informacion Personal</legend>
+
+              <label for="name">Nombre Completo:</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="dni">DNI:</label>
+              <input
+                type="text"
+                id="dni"
+                name="dni"
+                maxlength="8"
+                pattern="\d{8}"
+                required
+                title="Debe contener exactamente 8 dígitos"
+              />
+
+              <label for="phone">Teléfono:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                maxlength="9"
+                pattern="\d{9}"
+                title="Debe contener 9 digitos numericos"
+                required
+              />
+
+              <label for="email">Correo Electronico:</label>
+              <input type="email" id="email" name="email" required />
+            </fieldset>
+
+            <fieldset>
+              <legend>Datos para la entrega</legend>
+
+              <label for="branch">Estaciones del tren:</label>
+              <select name="branch" id="branch" required>
+                <option value="" disabled selected>
+                  Seleccione una estacion
+                </option>
+                <option value="villa_el_salvador">Villa El Salvador</option>
+                <option value="parque_insdustrial">Parque Industrial</option>
+                <option value="pumacahua">Pumacahua</option>
+                <option value="villa_maria">Villa María</option>
+                <option value="maria_auxiliadora">María Auxiliadora</option>
+                <option value="san_juan">San Juan</option>
+                <option value="caja_de_agua">Caja de Agua</option>
+                <option value="atocongo">Atocongo</option>
+                <option value="jorge_chavez">Jorge Chávez</option>
+                <option value="ayacucho">Ayacucho</option>
+                <option value="cabitos">Cabitos</option>
+                <option value="angamos">Angamos</option>
+                <option value="san_borja_sur">San Borja sur</option>
+                <option value="la_cultura">La Cultura</option>
+                <option value="nicolas_arriola">Nicolás Arriola</option>
+                <option value="gamarra">Gamarra</option>
+                <option value="miguel_grau">Miguel Grau</option>
+                <option value="el_angel">El Ángel</option>
+                <option value="presbitero_maestro">Presbítero Maestro</option>
+                <option value="caja_de_agua">Caja de Agua</option>
+                <option value="piramide_del_sol">Pirámide del Sol</option>
+                <option value="los_jardines">Los Jardines</option>
+                <option value="los_postes">Los Postes</option>
+                <option value="san_carlos">San Carlos</option>
+                <option value="san_martin">San Martin</option>
+                <option value="santa_rosa">Santa Rosa</option>
+                <option value="bayovar">Bayovar</option>
+              </select>
+
+              <label for="date">Fecha de entrega:</label>
+              <input type="date" id="date" name="date" required />
+
+              <label for="hour">Horario de entrega:</label>
+              <select name="hour" id="hour" required>
+                <option value="" disabled selected>Seleccione hora</option>
+              </select>
+
+              <label for="section">Representante de entrega:</label>
+              <input
+                type="text"
+                id="section"
+                name="section"
+                readonly
+                aria-readonly="true"
+              />
+            </fieldset>
+
+            <fieldset>
+              <legend>Resumen de productos seleccionados</legend>
+              <ul id="lista-seleccionados" role="list"></ul>
+              <div id="total-precio" class="total-precio" aria-live="polite">
+                Total: S/0.00
+              </div>
+            </fieldset>
+
+            <button type="submit">Confirmar Pedido</button>
+          </form>
+        </section>
+      </section>
+
+      <div
+        id="toast-container"
+        style="
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          z-index: 9999;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        "
+      ></div>
+      <a
+        href="https://wa.me/51922762808?text=Hola,%20me%20interesan%20sus%20aproductos%20y%20quisiera%20más%20información."
+        target="_blank"
+        class="whatsapp-float"
+        aria-label="Contáctanos por WhatsApp"
+        title="WHATSAPP"
+        style="
+          position: fixed;
+          bottom: 25px;
+          right: 25px;
+          background-color: #25d366;
+          color: white;
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+          z-index: 9998;
+          text-decoration: none;
+          transition: transform 0.3s ease;
+        "
+      >
+        <i class="fab fa-whatsapp" style="font-size: 30px"></i>
+      </a>
+    </main>
+
+    <!-- Modal de Confirmación de Pedido Profesional -->
+    <div id="modal-confirmacion" class="modal-overlay" style="display: none">
+      <div class="modal-card">
+        <!-- Cabecera Corporativa de Éxito -->
+        <div class="modal-header-success">
+          <div class="modal-icon-wrapper">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h2>¡Pedido Confirmado!</h2>
+          <p class="modal-subtitle">
+            Gracias por confiar en <strong>NutraAdvance US</strong>
+          </p>
+        </div>
+
+        <!-- Cuerpo del Modal (Contenedor Dinámico) -->
+        <div class="modal-body-nested">
+          <div id="resumen-pedido-modal" class="resumen-box">
+            <!-- Los datos del formulario se inyectarán aquí dinámicamente -->
+          </div>
+        </div>
+
+        <!-- Pie de página con el Botón de Acción -->
+        <div class="modal-footer">
+          <button id="btn-cerrar-modal" class="btn-confirm-action">
+            Aceptar y Continuar
+            <i class="fas fa-arrow-right" style="margin-left: 8px"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Confirmación de Pedido -->
+    <!-- <div id="modal-confirmacion" class="modal-overlay" style="display: none">
+      <div class="modal-content"> -->
+    <!-- <h2>🎉 ¡Pedido Confirmado!</h2>
+        <p>
+          Gracias por tu compra en <strong>NutraAdvance US</strong>. Hemos
+          registrado tu pedido correctamente.
+        </p> -->
+
+    <!-- Aquí inyectaremos todo el resumen, saludo y correo dinámicamente -->
+    <!-- <div
+          id="resumen-pedido-modal"
+          style="margin: 15px 0; text-align: left; font-size: 0.9rem"
+        ></div> -->
+
+    <!-- <button
+          id="btn-cerrar-modal"
+          class="btn-primary"
+          style="margin-top: 10px"
+        >
+          Aceptar y Continuar
+        </button>
+      </div>
+    </div> -->
+
+    <footer id="main-footer"></footer>
+  </body>
+</html>
