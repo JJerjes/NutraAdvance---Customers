@@ -53,6 +53,7 @@ NACUSTOMERS/
 ├── NutraAdvanceAPI.sln
 ├── Program.cs
 └── nutraadvance-frontend/
+├── node_modules
 ├── pages/
 │ ├── checkout.html
 │ ├── accesorios.html
@@ -69,7 +70,7 @@ NACUSTOMERS/
 │ │ ├── cartCheckout.js
 │ │ ├── catalogo.js
 │ │ ├── checkout.js
-│ │ ├── checkoutDynamucs.js
+│ │ ├── checkoutDynamics.js
 │ │ ├── componentLoader.js
 │ │ ├── modal-confirmar.js
 │ │ ├── template-loader.js
@@ -81,7 +82,6 @@ NACUSTOMERS/
 | | ├── disponibilidad.json
 | | ├── ofertas.json
 | | └── salud.json
-| │ └── salud.json
 │ └── partials/
 │ ├── cart-modal.html
 │ ├── footer.html
@@ -90,10 +90,10 @@ NACUSTOMERS/
 ├── .editorconfig
 ├── .eslintrc.json
 ├── .prettierrc
-├── .gitignore
-├── index.html
 ├── notas.txt
 ├── package-lock.json
 ├── package.json
 ├── README.md
-└── vite.config.js
+├── vite.config.js
+├── .gitignore
+└── index.html

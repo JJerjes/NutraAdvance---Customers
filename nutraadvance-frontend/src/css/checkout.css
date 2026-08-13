@@ -59,6 +59,8 @@
     }
   }
 
+
+
   /* Tablet (768px en adelante) */
   @media (min-width: 768px) {
     padding: 35px 25px;
@@ -390,6 +392,33 @@ button[type="submit"] {
 
 .btn-confirm-action:active {
     transform: scale(0.98);
+}
+
+.back-home-container {
+  margin: 0 0 0 -5px;
+
+  .btn-back {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    bottom: 420px;
+    position: fixed;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.96rem;
+    background-color: #32cd32;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: #07173e;
+      color: white;
+      animation: none;
+    }
+  }
 }
 
 /* Animación de entrada suave */

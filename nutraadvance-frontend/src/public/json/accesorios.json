@@ -2,29 +2,41 @@
   {
     "id": 1,
     "nombre": "Magnesium Citrate Pure Powder - NOW",
-    "descripcion": "Polvo puro de citrato de magnesio (8 oz / 227 g). Soporte para el sistema nervioso, producción de energía y función enzimática.",
-    "precio": 300,
-    "imagen": "../src/public/images/salud/magnesio.png"
+    "descripcion": "✔️ Suplemento dietético en polvo puro (8oz /227g).<br>✔️ Apoya la salud de personas con diabetes y prediabetes.<br>✔️ Ayuda a controlar los niveles de azùcar en la sangre.<br>✔️ Calidad farmacéutica garantizada (Importado de EE. UU.).",
+    "precio": {
+      "original": 350,
+      "oferta": 300
+    },
+    "imagen": "/nutraadvance-frontend/src/public/images/salud/magnesio.png"
   },
   {
     "id": 2,
-    "nombre": "Potassium Citrate Pure Powder -NOW",
-    "descripcion": "Mineral esencial en polvo (12 oz / 340 g). Apoya el equilibrio de electrolitos, el pH normal y la contracción muscular adecuada.",
-    "precio": 300,
-    "imagen": "../src/public/images/salud/magnesio.png"
+    "nombre": "Potassium Citrate Pure Powder - NOW",
+    "descripcion": "✔️ Suplemento dietético en polvo puro (12oz / 340g).<br>✔️ Alivia calambres musculares y debilidad corporal.<br>✔️ Apoya la salud cardiovascular y la presión arterial.<br>✔️ Calidad farmacéutica garantizada (Importado de EE. UU.).",
+    "precio": {
+      "original": 380,
+      "oferta": 350
+    },
+    "imagen": "/nutraadvance-frontend/src/public/images/salud/potasio.png"
   },
   {
     "id": 3,
     "nombre": "Glucosamine HCl with MSM - Kirkland Signature",
-    "descripcion": "Frasco de 375 tabletas de extra fuerza (1500 mg / 1500 mg). Amortigua las articulaciones, apoya el movimiento y promueve cartílago saludable (Verificado USP).",
-    "precio": 350,
-    "imagen": "../src/public/images/salud/magnesio.png"
+    "descripcion": "✔️ Suplemento dietético (375 tabletas / 1500 mg).<br>✔️ Alivia el dolor, rigidez y desgaste articular.<br>✔️ Mejora la movilidad y protege el cartílago.<br>✔️ Calidad farmacéutica garantizada (Importado de EE. UU.).",
+    "precio": {
+      "original": 400,
+      "oferta": 350
+    },
+    "imagen": "/nutraadvance-frontend/src/public/images/salud/glucosamine.png"
   },
   {
     "id": 4,
     "nombre": "Optimum Nutrition Micronized Creatine Powder",
-    "descripcion": "Creatina monohidratada micronizada sin sabor (1.32 lb / 600 g - 120 servicios). Diseñada para soporte de construcción muscular y fuerza explosiva.",
-    "precio": 300,
-    "imagen": "../src/public/images/salud/magnesio.png"
+    "descripcion": "✔️ Suplemento dietético en polvo micronizado (300g / 600g).<br>✔️ Aumenta la fuerza, potencia y masa muscular.<br>✔️ Mejora el rendimiento físico, la recuperación y la función cognitiva.<br>✔️ Calidad premium garantizada (Importado de EE. UU.).",
+    "precio": {
+      "original": 450,
+      "oferta": 400
+    },
+    "imagen": "/nutraadvance-frontend/src/public/images/salud/creatina.webp"
   }
 ]

@@ -66,9 +66,10 @@ body {
   }
 
   .back-home-container {
-    margin: 0 0 0 -17px;
+    margin: 0 0 0 -33px;
 
     .btn-back {
+      font-family: 'Montserrat', sans-serif;
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -76,7 +77,7 @@ body {
       position: fixed;
       color: white;
       text-decoration: none;
-      font-weight: 900;
+      font-weight: 500;
       font-size: 0.96rem;
       background-color: #32cd32;
       padding: 10px;
@@ -92,7 +93,7 @@ body {
   }
 
   .catalog-section {
-    padding: 15px;
+    padding: 30px;
     max-width: 1200px;
     margin: 0 auto;
 
