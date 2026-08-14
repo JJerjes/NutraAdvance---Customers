@@ -109,11 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const pathname = window.location.pathname;
 
   if (pathname.includes('salud.html')) {
-    loadProducts('nutraadvance-frontend/src/public/json/salud.json');
+    loadProducts('../src/public/json/salud.json');
   } else if (pathname.includes('accesorios.html')) {
-    loadProducts('nutraadvance-frontend/src/public/json/accesorios.json');
+    loadProducts('./src/public/json/accesorios.json');
   } else if (pathname.includes('ofertas.html')) {
-    loadProducts('nutraadvance-frontend/src/public/json/ofertas.json');
+    loadProducts('./src/public/json/ofertas.json');
   }
 
   updateCartModal();
