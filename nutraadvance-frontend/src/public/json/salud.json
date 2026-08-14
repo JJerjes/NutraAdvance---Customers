@@ -7,7 +7,7 @@
       "original": 350,
       "oferta": 300
     },
-    "imagen": "/nutraadvance-frontend/src/public/images/salud/magnesio.png"
+    "imagen": "nutraadvance-frontend/src/public/images/salud/magnesio.png"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
       "original": 380,
       "oferta": 350
     },
-    "imagen": "/nutraadvance-frontend/src/public/images/salud/potasio.png"
+    "imagen": "nutraadvance-frontend/src/public/images/salud/potasio.png"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
       "original": 400,
       "oferta": 350
     },
-    "imagen": "/nutraadvance-frontend/src/public/images/salud/glucosamine.png"
+    "imagen": "nutraadvance-frontend/src/public/images/salud/glucosamine.png"
   },
   {
     "id": 4,
@@ -37,6 +37,6 @@
       "original": 450,
       "oferta": 400
     },
-    "imagen": "/nutraadvance-frontend/src/public/images/salud/creatina.webp"
+    "imagen": "nutraadvance-frontend/src/public/images/salud/creatina.webp"
   }
 ]
