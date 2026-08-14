@@ -18,7 +18,7 @@
   background: #ffffff;
   width: 100%;
   max-width: 400px;
-  height: 100%;
+  height: 80%;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
   /* Sombra hacia el otro lado */
   display: flex;
@@ -27,7 +27,7 @@
   padding: 20px;
   box-sizing: border-box;
   border-radius: 7px;
-
+  top: 10%;
   /* Animación de entrada de derecha a izquierda */
   transform: translateX(100%);
   animation: slideInRight 0.35s ease forwards;
