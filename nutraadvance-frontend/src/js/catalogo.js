@@ -59,13 +59,13 @@ export async function loadProducts(jsonPath) {
       buyBtn.addEventListener('click', () => {
         console.log("Botón presionado para el producto ID:", product.id);
         
-        // Estructura limpia para el carrito
-        const productForCart = {
-          id: product.id,
-          nombre: product.nombre,
-          precio: product.precio.oferta,
-          quantity: 1
-        };
+        // // Estructura limpia para el carrito
+        // const productForCart = {
+        //   id: product.id,
+        //   nombre: product.nombre,
+        //   precio: product.precio.oferta,
+        //   quantity: 1
+        // };
 
         addToCart(product);
       });
@@ -109,11 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const pathname = window.location.pathname;
 
   if (pathname.includes('salud.html')) {
-    loadProducts('../src/public/json/salud.json');
+    loadProducts('nutraadvance-frontend/src/public/json/salud.json');
   } else if (pathname.includes('accesorios.html')) {
-    loadProducts('./src/public/json/accesorios.json');
+    loadProducts('nutraadvance-frontend/src/public/json/accesorios.json');
   } else if (pathname.includes('ofertas.html')) {
-    loadProducts('./src/public/json/ofertas.json');
+    loadProducts('nutraadvance-frontend/src/public/json/ofertas.json');
   }
 
   updateCartModal();
