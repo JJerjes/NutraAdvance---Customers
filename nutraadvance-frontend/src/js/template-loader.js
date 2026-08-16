@@ -1,6 +1,3 @@
-// Variable para blindar el sistema contra el doble clic rápido
-let isNavigating = false;
-
 // FUNCIÓN loadComponent
 // Propósito: Descarga un archivo HTML externo y lo inyecta en un contenedor.
 export async function loadComponent(targetContainer, filePath) {
@@ -45,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initSPAInteractions();
 });
 
-// ENRUTADOR SPA LIGERO
+// ENRUTADOR SPA LIGERO (Solo para catálogos internos)
 function initSPAInteractions() {
   document.body.addEventListener('click', async (e) => {
     const link = e.target.closest('a');
@@ -53,15 +50,12 @@ function initSPAInteractions() {
     if (link && link.getAttribute('href')) {
       const href = link.getAttribute('href');
 
-      if (href.includes('salud.html') || href.includes('accesorios.html') || href.includes('ofertas.html') || href.includes('index.html')) {
-        e.preventDefault(); // Evita que la página recargue de golpe y pierda estilos
-
-        // Evita errores si hacen doble clic rápido
-        if (isNavigating) return;
-        isNavigating = true;
+      // Solo interceptamos los catálogos internos, dejamos que index.html funcione de forma nativa a un solo clic
+      if (href.includes('salud.html') || href.includes('accesorios.html') || href.includes('ofertas.html')) {
+        e.preventDefault(); 
         
-        let targetView = 'nutraadvance-frontend/src/public/partials/main-hero.html';
-        let currentType = 'home';
+        let targetView = '';
+        let currentType = '';
 
         if (href.includes('salud.html')) {
           targetView = 'nutraadvance-frontend/pages/salud.html'; 
@@ -72,9 +66,6 @@ function initSPAInteractions() {
         } else if (href.includes('ofertas.html')) {
           targetView = 'nutraadvance-frontend/pages/ofertas.html';
           currentType = 'ofertas';
-        } else if (href.includes('index.html') || href === '') {
-          targetView = 'nutraadvance-frontend/src/public/partials/main-hero.html';
-          currentType = 'home';
         }
 
         await loadComponent('main-content', targetView);
@@ -91,11 +82,6 @@ function initSPAInteractions() {
         }
 
         window.history.pushState({}, '', href);
-
-        // Libera el bloqueo de navegación tras un breve instante
-        setTimeout(() => {
-          isNavigating = false;
-        }, 300);
       }
     }
   });
