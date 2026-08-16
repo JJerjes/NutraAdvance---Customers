@@ -1,5 +1,7 @@
+// Variable global para la ruta base de GitHub Pages (Nombre de tu repositorio)
+const BASE_PATH = '/NutraAdvance---Customers/nutraadvance-frontend/';
+
 // FUNCIÓN loadComponent
-// Propósito: Descarga un archivo HTML externo y lo inyecta en un contenedor.
 export async function loadComponent(targetContainer, filePath) {
   try {
     const response = await fetch(filePath);
@@ -16,53 +18,33 @@ export async function loadComponent(targetContainer, filePath) {
 
 // Carga inicial de componentes estáticos y contenido por defecto
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadComponent('main-header', 'nutraadvance-frontend/src/public/partials/header.html');
-  await loadComponent('main-content', 'nutraadvance-frontend/src/public/partials/main-hero.html'); 
-  await loadComponent('main-footer', 'nutraadvance-frontend/src/public/partials/cart-modal.html');
-  await loadComponent('main-footer', 'nutraadvance-frontend/src/public/partials/footer.html');
-
+  await loadComponent('main-header', BASE_PATH + 'src/public/partials/header.html');
+  await loadComponent('main-content', BASE_PATH + 'src/public/partials/main-hero.html'); 
+  await loadComponent('main-footer', BASE_PATH + 'src/public/partials/cart-modal.html');
+  await loadComponent('main-footer', BASE_PATH + 'src/public/partials/footer.html');
 
   const path = window.location.pathname;
 
   if (path.includes('salud.html')) {
-    await loadComponent('main-content', 'nutraadvance-frontend/pages/salud.html');
+    await loadComponent('main-content', BASE_PATH + 'pages/salud.html');
     const { loadProducts } = await import('./catalogo.js');
-    // Usamos ruta absoluta basada en tu repositorio para evitar que falle al actualizar
-    loadProducts('/NutraAdvance---Customers/nutraadvance-frontend/src/public/json/salud.json');
+    loadProducts(BASE_PATH + 'src/public/json/salud.json');
   } else if (path.includes('accesorios.html')) {
-    await loadComponent('main-content', 'nutraadvance-frontend/pages/accesorios.html');
+    await loadComponent('main-content', BASE_PATH + 'pages/accesorios.html');
     const { loadProducts } = await import('./catalogo.js');
-    loadProducts('/NutraAdvance---Customers/nutraadvance-frontend/src/public/json/accesorios.json');
+    loadProducts(BASE_PATH + 'src/public/json/accesorios.json');
   } else if (path.includes('ofertas.html')) {
-    await loadComponent('main-content', 'nutraadvance-frontend/pages/ofertas.html');
+    await loadComponent('main-content', BASE_PATH + 'pages/ofertas.html');
     const { loadProducts } = await import('./catalogo.js');
-    loadProducts('/NutraAdvance---Customers/nutraadvance-frontend/src/public/json/ofertas.json');
+    loadProducts(BASE_PATH + 'src/public/json/ofertas.json');
   } else {
-    await loadComponent('main-content', 'nutraadvance-frontend/src/public/partials/main-hero.html');
+    await loadComponent('main-content', BASE_PATH + 'src/public/partials/main-hero.html');
   }
-
-  // const path = window.location.pathname;
-
-  // if (path.includes('salud.html')) {
-  //   await loadComponent('main-content', 'nutraadvance-frontend/pages/salud.html');
-  //   const { loadProducts } = await import('./catalogo.js');
-  //   loadProducts('nutraadvance-frontend/src/public/json/salud.json');
-  // } else if (path.includes('accesorios.html')) {
-  //   await loadComponent('main-content', 'nutraadvance-frontend/pages/accesorios.html');
-  //   const { loadProducts } = await import('./catalogo.js');
-  //   loadProducts('nutraadvance-frontend/src/public/json/accesorios.json');
-  // } else if (path.includes('ofertas.html')) {
-  //   await loadComponent('main-content', 'nutraadvance-frontend/pages/ofertas.html');
-  //   const { loadProducts } = await import('./catalogo.js');
-  //   loadProducts('nutraadvance-frontend/src/public/json/ofertas.json');
-  // } else {
-  //   await loadComponent('main-content', 'nutraadvance-frontend/src/public/partials/main-hero.html');
-  // }
 
   initSPAInteractions();
 });
 
-// ENRUTADOR SPA LIGERO (Solo para catálogos internos)
+// ENRUTADOR SPA LIGERO
 function initSPAInteractions() {
   document.body.addEventListener('click', async (e) => {
     const link = e.target.closest('a');
@@ -70,7 +52,6 @@ function initSPAInteractions() {
     if (link && link.getAttribute('href')) {
       const href = link.getAttribute('href');
 
-      // Solo interceptamos los catálogos internos, dejamos que index.html funcione de forma nativa a un solo clic
       if (href.includes('salud.html') || href.includes('accesorios.html') || href.includes('ofertas.html')) {
         e.preventDefault(); 
         
@@ -78,13 +59,13 @@ function initSPAInteractions() {
         let currentType = '';
 
         if (href.includes('salud.html')) {
-          targetView = 'nutraadvance-frontend/pages/salud.html'; 
+          targetView = BASE_PATH + 'pages/salud.html'; 
           currentType = 'salud';
         } else if (href.includes('accesorios.html')) {
-          targetView = 'nutraadvance-frontend/pages/accesorios.html';
+          targetView = BASE_PATH + 'pages/accesorios.html';
           currentType = 'accesorios';
         } else if (href.includes('ofertas.html')) {
-          targetView = 'nutraadvance-frontend/pages/ofertas.html';
+          targetView = BASE_PATH + 'pages/ofertas.html';
           currentType = 'ofertas';
         }
 
@@ -92,13 +73,13 @@ function initSPAInteractions() {
 
         if (currentType === 'salud') {
           const { loadProducts } = await import('./catalogo.js');
-          loadProducts('nutraadvance-frontend/src/public/json/salud.json');
+          loadProducts(BASE_PATH + 'src/public/json/salud.json');
         } else if (currentType === 'accesorios') {
           const { loadProducts } = await import('./catalogo.js');
-          loadProducts('nutraadvance-frontend/src/public/json/accesorios.json');
+          loadProducts(BASE_PATH + 'src/public/json/accesorios.json');
         } else if (currentType === 'ofertas') {
           const { loadProducts } = await import('./catalogo.js');
-          loadProducts('nutraadvance-frontend/src/public/json/ofertas.json');
+          loadProducts(BASE_PATH + 'src/public/json/ofertas.json');
         }
 
         window.history.pushState({}, '', href);
