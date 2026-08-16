@@ -21,23 +21,43 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadComponent('main-footer', 'nutraadvance-frontend/src/public/partials/cart-modal.html');
   await loadComponent('main-footer', 'nutraadvance-frontend/src/public/partials/footer.html');
 
+
   const path = window.location.pathname;
 
   if (path.includes('salud.html')) {
     await loadComponent('main-content', 'nutraadvance-frontend/pages/salud.html');
     const { loadProducts } = await import('./catalogo.js');
-    loadProducts('nutraadvance-frontend/src/public/json/salud.json');
+    // Usamos ruta absoluta basada en tu repositorio para evitar que falle al actualizar
+    loadProducts('/NutraAdvance---Customers/nutraadvance-frontend/src/public/json/salud.json');
   } else if (path.includes('accesorios.html')) {
     await loadComponent('main-content', 'nutraadvance-frontend/pages/accesorios.html');
     const { loadProducts } = await import('./catalogo.js');
-    loadProducts('nutraadvance-frontend/src/public/json/accesorios.json');
+    loadProducts('/NutraAdvance---Customers/nutraadvance-frontend/src/public/json/accesorios.json');
   } else if (path.includes('ofertas.html')) {
     await loadComponent('main-content', 'nutraadvance-frontend/pages/ofertas.html');
     const { loadProducts } = await import('./catalogo.js');
-    loadProducts('nutraadvance-frontend/src/public/json/ofertas.json');
+    loadProducts('/NutraAdvance---Customers/nutraadvance-frontend/src/public/json/ofertas.json');
   } else {
     await loadComponent('main-content', 'nutraadvance-frontend/src/public/partials/main-hero.html');
   }
+
+  // const path = window.location.pathname;
+
+  // if (path.includes('salud.html')) {
+  //   await loadComponent('main-content', 'nutraadvance-frontend/pages/salud.html');
+  //   const { loadProducts } = await import('./catalogo.js');
+  //   loadProducts('nutraadvance-frontend/src/public/json/salud.json');
+  // } else if (path.includes('accesorios.html')) {
+  //   await loadComponent('main-content', 'nutraadvance-frontend/pages/accesorios.html');
+  //   const { loadProducts } = await import('./catalogo.js');
+  //   loadProducts('nutraadvance-frontend/src/public/json/accesorios.json');
+  // } else if (path.includes('ofertas.html')) {
+  //   await loadComponent('main-content', 'nutraadvance-frontend/pages/ofertas.html');
+  //   const { loadProducts } = await import('./catalogo.js');
+  //   loadProducts('nutraadvance-frontend/src/public/json/ofertas.json');
+  // } else {
+  //   await loadComponent('main-content', 'nutraadvance-frontend/src/public/partials/main-hero.html');
+  // }
 
   initSPAInteractions();
 });
