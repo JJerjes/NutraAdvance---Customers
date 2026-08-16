@@ -48,55 +48,55 @@ _The system uses a relational scheme to ensure data integrity:_
 
 NACUSTOMERS/
 └── nutraadvance-backend/
-├── Controllers
-├── Models
-├── NutraAdvanceAPI.sln
-├── Program.cs
+      ├── Controllers
+      ├── Models
+      ├── NutraAdvanceAPI.sln
+      ├── Program.cs
 └── nutraadvance-frontend/
-├── node_modules
-├── pages/
-│ ├── checkout.html
-│ ├── accesorios.html
-│ ├── ofertas.html
-│ └── salud.html
-├── src/
-│ ├── css/
-│ │ ├── catalogo.css
-│ │ ├── checkout.css
-│ │ ├── index.css
-| | └── modal-pedidos.css
-│ ├── js/
-│ │ ├── cart.js
-│ │ ├── cartCheckout.js
-│ │ ├── catalogo.js
-│ │ ├── checkout.js
-│ │ ├── checkoutDynamics.js
-│ │ ├── componentLoader.js
-│ │ ├── modal-confirmar.js
-│ │ ├── template-loader.js
-| | └── toast.js
-│ ├── public/
-│ │ ├── images/
-| | ├── salud
-| | ├── creatina.webp
-| | ├── glucosamine.png
-│ │ └── json/
-| | ├── accesorios.json
-| | ├── disponibilidad.json
-| | ├── ofertas.json
-| | └── salud.json
-│ └── partials/
-│ ├── cart-modal.html
-│ ├── footer.html
-│ ├── header.html
-│ └── main-hero.html
-├── .editorconfig
-├── .eslintrc.json
-├── .prettierrc
-├── notas.txt
-├── package-lock.json
-├── package.json
-├── README.md
-├── vite.config.js
+  ├── node_modules
+  ├── pages/
+  │   ├── checkout.html
+  │   ├── accesorios.html
+  │   ├── ofertas.html
+  │   └── salud.html
+  ├── src/
+  │ ├── css/
+  │ │ ├── catalogo.css
+  │ │ ├── checkout.css
+  │ │ ├── index.css
+  | | └── modal-pedidos.css
+  │ ├── js/
+  │ │ ├── cart.js
+  │ │ ├── cartCheckout.js
+  │ │ ├── catalogo.js
+  │ │ ├── checkout.js
+  │ │ ├── checkoutDynamics.js
+  │ │ ├── componentLoader.js
+  │ │ ├── modal-confirmar.js
+  │ │ ├── template-loader.js
+  | | └── toast.js
+  │ ├── public/
+  │ │ ├── images/
+  | | ├── salud
+  | | ├── creatina.webp
+  | | ├── glucosamine.png
+  │ │ └── json/
+  | | ├── accesorios.json
+  | | ├── disponibilidad.json
+  | | ├── ofertas.json
+  | | └── salud.json
+  │ └── partials/
+  │   ├── cart-modal.html
+  │   ├── footer.html
+  │   ├── header.html
+  │   └── main-hero.html
+  ├── .editorconfig
+  ├── .eslintrc.json
+  ├── .prettierrc
+  ├── notas.txt
+  ├── package-lock.json
+  ├── package.json
+  ├── README.md
+  ├── vite.config.js
 ├── .gitignore
 └── index.html
