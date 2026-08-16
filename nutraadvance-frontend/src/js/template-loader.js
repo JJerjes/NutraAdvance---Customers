@@ -20,6 +20,9 @@ export async function loadComponent(targetContainer, filePath) {
 document.addEventListener('DOMContentLoaded', async () => {
   await loadComponent('main-header', BASE_PATH + 'src/public/partials/header.html');
   await loadComponent('main-content', BASE_PATH + 'src/public/partials/main-hero.html'); 
+  
+  // NOTA: Tienes ambos cargando en 'main-footer'. El footer reemplazará al cart-modal. 
+  // Te sugiero cambiar uno de los dos a otro contenedor en tu index.html (ej. 'modal-container')
   await loadComponent('main-footer', BASE_PATH + 'src/public/partials/cart-modal.html');
   await loadComponent('main-footer', BASE_PATH + 'src/public/partials/footer.html');
 
@@ -27,15 +30,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   if (path.includes('salud.html')) {
     await loadComponent('main-content', BASE_PATH + 'pages/salud.html');
-    const { loadProducts } = await import('./catalogo.js');
+    // CORRECCIÓN: Ruta absoluta para el import de JS
+    const { loadProducts } = await import(BASE_PATH + 'src/js/catalogo.js');
     loadProducts(BASE_PATH + 'src/public/json/salud.json');
   } else if (path.includes('accesorios.html')) {
     await loadComponent('main-content', BASE_PATH + 'pages/accesorios.html');
-    const { loadProducts } = await import('./catalogo.js');
+    const { loadProducts } = await import(BASE_PATH + 'src/js/catalogo.js');
     loadProducts(BASE_PATH + 'src/public/json/accesorios.json');
   } else if (path.includes('ofertas.html')) {
     await loadComponent('main-content', BASE_PATH + 'pages/ofertas.html');
-    const { loadProducts } = await import('./catalogo.js');
+    const { loadProducts } = await import(BASE_PATH + 'src/js/catalogo.js');
     loadProducts(BASE_PATH + 'src/public/json/ofertas.json');
   } else {
     await loadComponent('main-content', BASE_PATH + 'src/public/partials/main-hero.html');
@@ -72,13 +76,13 @@ function initSPAInteractions() {
         await loadComponent('main-content', targetView);
 
         if (currentType === 'salud') {
-          const { loadProducts } = await import('./catalogo.js');
+          const { loadProducts } = await import(BASE_PATH + 'src/js/catalogo.js');
           loadProducts(BASE_PATH + 'src/public/json/salud.json');
         } else if (currentType === 'accesorios') {
-          const { loadProducts } = await import('./catalogo.js');
+          const { loadProducts } = await import(BASE_PATH + 'src/js/catalogo.js');
           loadProducts(BASE_PATH + 'src/public/json/accesorios.json');
         } else if (currentType === 'ofertas') {
-          const { loadProducts } = await import('./catalogo.js');
+          const { loadProducts } = await import(BASE_PATH + 'src/js/catalogo.js');
           loadProducts(BASE_PATH + 'src/public/json/ofertas.json');
         }
 
