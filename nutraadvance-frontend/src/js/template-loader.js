@@ -1,3 +1,6 @@
+// Variable para blindar el sistema contra el doble clic rápido
+let isNavigating = false;
+
 // FUNCIÓN loadComponent
 // Propósito: Descarga un archivo HTML externo y lo inyecta en un contenedor.
 export async function loadComponent(targetContainer, filePath) {
@@ -52,6 +55,10 @@ function initSPAInteractions() {
 
       if (href.includes('salud.html') || href.includes('accesorios.html') || href.includes('ofertas.html') || href.includes('index.html')) {
         e.preventDefault(); // Evita que la página recargue de golpe y pierda estilos
+
+        // Evita errores si hacen doble clic rápido
+        if (isNavigating) return;
+        isNavigating = true;
         
         let targetView = 'nutraadvance-frontend/src/public/partials/main-hero.html';
         let currentType = 'home';
@@ -84,6 +91,11 @@ function initSPAInteractions() {
         }
 
         window.history.pushState({}, '', href);
+
+        // Libera el bloqueo de navegación tras un breve instante
+        setTimeout(() => {
+          isNavigating = false;
+        }, 300);
       }
     }
   });
