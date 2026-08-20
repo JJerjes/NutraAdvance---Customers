@@ -49,6 +49,7 @@ _The system uses a relational scheme to ensure data integrity:_
 NACUSTOMERS/
 └── nutraadvance-backend/
       ├── Controllers
+      ├── Dockerfile
       ├── Models
       ├── NutraAdvanceAPI.sln
       ├── Program.cs
@@ -99,4 +100,6 @@ NACUSTOMERS/
   ├── README.md
   ├── vite.config.js
 ├── .gitignore
+├── 404.html
 └── index.html
+
